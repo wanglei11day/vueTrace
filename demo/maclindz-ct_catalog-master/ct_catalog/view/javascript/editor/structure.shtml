@@ -1,0 +1,531 @@
+<div id="header">
+    <img id="clear_creation" rel="tooltip" data-placement="bottom" data-title="{{#trans}}Clear creation{{/trans}}" class="kwp-icon" src="{{static_url}}img/new60.png" />
+    <div class="kwp-icon-container popover-link">
+        <img rel="tooltip" data-placement="bottom" data-title="{{#trans}}Save your creation{{/trans}}" id="save_project" class="kwp-icon disabled" src="{{static_url}}img/icons/header_save.png" />
+        <canvas width="20" height="20" id="progress_canvas"></canvas>
+    </div>
+    <span class="kwp-separator"></span>
+    <img id="cut_item" rel="tooltip" data-placement="bottom" data-title="{{#trans}}Cut{{/trans}}" class="kwp-icon" src="{{static_url}}img/icons/cut60.png" />
+    <img id="copy_item" rel="tooltip" data-placement="bottom" data-title="{{#trans}}Copy{{/trans}}" class="kwp-icon" src="{{static_url}}img/icons/copy60.png" />
+    <img id="paste_item" rel="tooltip" data-placement="bottom" data-title="{{#trans}}Paste{{/trans}}" class="kwp-icon disabled" src="{{static_url}}img/icons/paste60.png" />
+    <span class="kwp-separator"></span>
+
+    <img id="undo" rel="tooltip" data-placement="bottom" data-title="{{#trans}}Undo{{/trans}}" class="kwp-icon disabled" src="{{static_url}}img/icons/header_prev.png" />
+    <img id="redo" rel="tooltip" data-placement="bottom" data-title="{{#trans}}Redo{{/trans}}" class="kwp-icon disabled" src="{{static_url}}img/icons/header_next.png" />    
+
+    <span class="kwp-separator"></span>
+    <img rel="tooltip" data-placement="bottom" data-title="{{#trans}}Autofill creation{{/trans}}" id="autofill_toggle" class="kwp-icon popover-link disabled" src="{{static_url}}img/icons/autoenhance.png" />
+    <!-- img rel="tooltip" data-placement="bottom" data-title="{{#trans}}Grid options{{/trans}}" id="grid_toggle" class="kwp-icon popover-link" src="{{static_url}}img/icons/grid30.png" / -->
+    <img rel="tooltip" data-placement="bottom" data-title="{{#trans}}Smart Guides options{{/trans}}" id="guides_toggle" class="kwp-icon popover-link" src="{{static_url}}img/icons/grid30.png" />
+
+    <img rel="tooltip" data-placement="bottom" data-title="{{#trans}}Fullscreen{{/trans}}" id="rq_fullsrc" class="kwp-icon" src="{{static_url}}img/icons/fullscreen_on.png" />
+    <img rel="tooltip" data-placement="bottom" data-title="{{#trans}}Cancel fullscreen{{/trans}}" id="rq_windowed" class="hide kwp-icon" src="{{static_url}}img/icons/fullscreen_off.png" />
+
+    <span class="kwp-separator"></span>
+    <img rel="tooltip" data-placement="bottom" data-title="{{#trans}}Edit this photo{{/trans}}" id="edit_photo" class="hide kwp-icon" src="{{static_url}}img/icons/edit_photo128.png" />
+    <p style="display:none;" id="edit_creation" class="kwp-icon p-icon"><i class="icon-edit"></i> {{#trans}}Edit this creation{{/trans}}</p>
+    
+
+    <div class="order-zone pull-right">
+        <span id="preview_btn"></span>
+        <span id="preview_3D"></span>
+        <p id="order_btn" class="kwp-icon p-icon">{{#trans}}Order{{/trans}}</p>
+    </div>
+
+    <img rel="tooltip" data-placement="bottom" data-title="{{#trans}}Share your creation{{/trans}}" id="share_toggle" class="hide kwp-icon popover-link pull-right" src="{{static_url}}img/icons/header_share.png" style="margin:8px 10px 0 0;"/>
+</div>
+
+<div id="main_application" class="clearfix">
+    <div id="sidebar" class="pull-left">
+        <div style="margin-left:3px;">
+            <div id="object_options" class="menu-block">
+                <div class="title">
+                    <img class="pull-right" src="{{static_url}}img/icons/menu_down.png" />
+                    <span>{{#trans}}Options{{/trans}}</span>
+                </div>
+                <div id="options_block" class="content">
+                    <div class="object-menu">
+                        <div id="object_title"></div>
+                        <div id="placeholder_action">
+                            <img id="delete_placeholder" class="kwp-icon" src="{{static_url}}img/icons/delete.png" />
+                            <hr />
+                            <p><button style="margin-top:10px;" class="btn" id="placeholder_photo">{{#trans}}Insert a photo{{/trans}}</button></p>
+                        </div>
+
+                        <div id="general_actions">
+                            <span rel="tooltip" data-placement="bottom" data-title="{{#trans}}Move to back{{/trans}}">
+                                <img id="lower_zindex" class="kwp-icon" src="{{static_url}}img/icons/position_background.png" />
+                            </span>
+                            <span rel="tooltip" data-placement="bottom" data-title="{{#trans}}Move to front{{/trans}}">
+                                <img id="upper_zindex" class="kwp-icon" src="{{static_url}}img/icons/position_foreground.png" />
+                            </span>
+
+                            <span rel="tooltip" data-placement="bottom" data-title="{{#trans}}Set as background{{/trans}}">
+                                <img id="to_background" class="kwp-icon" src="{{static_url}}img/icons/set_background.png" />
+                            </span>
+                            <span rel="tooltip" data-placement="bottom" data-title="{{#trans}}Cancel background{{/trans}}">
+                                <img id="from_background" class="kwp-icon" src="{{static_url}}img/icons/background_image.png" />
+                            </span>
+                            <span rel="tooltip" data-placement="bottom" data-title="{{#trans}}Enhance this photo{{/trans}}">
+                                <img id="autoenhance" class="kwp-icon" src="{{static_url}}img/enhance60.png" />
+                            </span>
+                            <span rel="tooltip" data-placement="bottom" data-title="{{#trans}}Rotate this photo{{/trans}}">
+                                <img id="rotatephoto" class="kwp-icon" src="{{static_url}}img/icons/rotate60.png" />
+                            </span>
+                            <span rel="tooltip" data-placement="bottom" data-title="{{#trans}}Delete this object{{/trans}}">
+                                <img id="delete" class="kwp-icon" src="{{static_url}}img/icons/delete.png" />
+                            </span>
+                            <hr />
+                            <div class="opacityslide">
+                                <div class="force-left">{{#trans}}Opacity{{/trans}}</div>
+                            </div>
+                        </div>
+
+                        <div id="clipart_menu">
+                            <div id="hue_slide">
+                                <div class="force-left">{{#trans}}Hue{{/trans}}</div>
+                            </div>
+                            <div id="saturation_slide">
+                                <div class="force-left">{{#trans}}Saturation{{/trans}}</div>
+                            </div>
+                            <div id="lightness_slide">
+                                <div class="force-left">{{#trans}}Lightness{{/trans}}</div>
+                            </div>
+                        </div>
+
+                        <div id="image_menu">
+                            <div class="zoomslide">
+                                <div class="force-left">{{#trans}}Zoom{{/trans}}</div>
+                            </div>
+                            <div id="frames_zone"></div>
+                        </div>
+
+                        <div id="text_menu">
+                            <div id="text_content">
+                                {{#trans}}Enter your text here{{/trans}}:<br />
+                                <textarea placeholder="{{#trans}}Enter your text here{{/trans}}" id="text_zone" class="input-block-level"></textarea>
+                            </div>
+
+                            <div id="text_style">
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        {{#trans}}Font{{/trans}}<br />
+                                        <input id="font_chooser" type="text" readonly="readonly" class="fake-selector input-block-level" value="Quicksand" />
+                                    </div>
+                                    <div class="span4">
+                                        {{#trans}}Size{{/trans}}<br />
+                                        <input id="size_chooser" type="text" readonly="readonly" class="fake-selector input-block-level" value="14" />
+                                    </div>
+                                    <div class="span2">
+                                        {{#trans}}Color{{/trans}}<br />
+                                        <div class="color-chooser"><div id="current_text_color"></div></div>
+                                    </div>
+                                </div>
+
+                                <div id="font_selector" class="hide"></div>
+                                <div id="size_selector" class="hide"></div>
+
+                                <img id="align_left" class="kwp-icon text-alignment" src="{{static_url}}img/icons/text_align_left.png" />
+                                <img id="align_right" class="kwp-icon text-alignment" src="{{static_url}}img/icons/text_align_right.png" />
+                                <img id="align_center" class="kwp-icon text-alignment" src="{{static_url}}img/icons/text_align_center.png" />
+                                <img id="align_justify" class="kwp-icon text-alignment" src="{{static_url}}img/icons/text_align_justify.png" />
+                            </div>
+                            <br />
+                            {{#trans}}Choose your TextFrame{{/trans}}
+                            <div style="margin-bottom:10px;" class="btn hide" id="remove_frame"><i class="icon-trash"></i> {{#trans}}Remove this frame{{/trans}}</div>
+                            <div class="clearfix" id="textframes_zone"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="menu-block">
+                <div class="title theme-zone">
+                    <img class="pull-right" src="{{static_url}}img/icons/menu_down.png" />
+                    <span>{{#trans}}Themes{{/trans}}</span>
+                </div>
+                <div id="themes_block" class="content">
+                    <div id="themes_choices" class="btn-group btn-block">
+                        <button class="btn active" id="show_themes">{{#trans}}Themes{{/trans}}</button>
+                        <button class="btn" id="show_layouts">{{#trans}}Layouts{{/trans}}</button>
+                    </div>
+                    <div class="search-container">
+                        <input data-placeholder="{{#trans}}Select a template category{{/trans}}" id="template_search" class="hide" />
+                    </div>
+                    <div class="clearfix" id="theme_zone"></div>
+                    <div class="clearfix hide" id="layout_zone"></div>
+                </div>
+            </div>
+
+
+            <div class="menu-block">
+                <div class="title">
+                    <img class="pull-right" src="{{static_url}}img/icons/menu_down.png" />
+                    {{#trans}}Cliparts{{/trans}}
+                </div>
+                <div id="cliparts_block" class="content">
+                    <div class="search-container">
+                        <input data-placeholder="{{#trans}}Select a clipart category{{/trans}}" id="cliparts_search" class="hide" />
+                    </div>
+                    <div class="clearfix" style="margin-bottom:10px;">
+                        <span style="margin:0;" class="prev btn pull-left">&laquo;</span>
+                        <span style="margin:0;" class="next btn pull-right">&raquo;</span>
+                    </div>
+                    <div class="clearfix" id="cliparts_zone"></div>
+                </div>
+            </div>
+            
+            <div class="menu-block hide">
+                <div class="title">
+                    <img class="pull-right" src="{{static_url}}img/icons/menu_down.png" />
+                    {{#trans}}Patterns{{/trans}}
+                </div>
+                <div id="patterns_block" class="content">
+                    <div class="clearfix" style="margin-bottom:10px;">
+                        <span style="margin:0;" class="prev btn pull-left">&laquo;</span>
+                        <span style="margin:0;" class="next btn pull-right">&raquo;</span>
+                    </div>
+
+                    <div class="clearfix" id="patterns_zone"></div>
+                </div>
+            </div>
+
+            <div class="menu-block">
+                <div class="title">
+                    <img class="pull-right" src="{{static_url}}img/icons/menu_down.png" />
+                    {{#trans}}Photos{{/trans}} <span id="nb_photos">
+                </div>
+                <div id="photos_block" class="content">
+                    <div class="photo-zoom">
+                        <img class="minus-zoom pull-left" src="{{static_url}}img/icons/zoomminus.png">
+                        <span id="photosize_slider"></span>
+                        <img class="plus-zoom pull-right" src="{{static_url}}img/icons/zoomplus.png">
+                    </div>
+                    <div class="clearfix" id="thumbnails_zone">
+                        <span class="placeholder"><p>{{#trans}}Choose your photos by clicking a button below{{/trans}}</p><img src="{{static_url}}img/down96_flat.png" /></span>
+                    </div>
+                    <div class="add-photos-btn">
+                        <input multiple accept="image/jpeg, image/png" type="file" style="display:none;" id="add_photos_input">
+                        <div class="hide" id="photo_load_progress"></div>
+
+                        <div class="btn-group btn-block" id="photos_btn_group">
+                            <button class="btn disabled delete-photos-btn">
+                                <img src="{{static_url}}img/trash48.png" alt="delete photos" />
+                            </button>
+
+                            <button class="btn" id="select-upload-way">
+                                <img src="{{static_url}}img/addphotos48.png" alt="from HD" />
+
+                            </button>
+                            <div id="upload-ways" style="display:none; border: 1px solid #ddd;background-color: #fff;border-radius: 5px; color: #333333;font-size:16px; line-height: 30px; width: 50%;position: absolute;bottom: 50px; text-align: center;right: 0px;border-bottom: none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
+                                <div id="add_photos_button" style="
+    display: block;color: #bcbcbc;cursor: pointer;font-weight: 700;border-bottom: 1px solid #ddd;"><a href="#" style="color:#333; margin-bottom:5px;">{{#trans}}Local Upload{{/trans}}</a></div>
+                                <div id="file-manager" style="
+    display: block;color: #bcbcbc;cursor: pointer;font-weight: 700;"><a href="#" style="color:#333;">{{#trans}}My Photos{{/trans}}</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-block">
+                <div class="title">
+                    <img class="pull-right" src="{{static_url}}img/icons/menu_down.png" />
+                    {{#trans}}Backgrounds{{/trans}}
+                </div>
+                <div id="backgrounds_block" class="content">
+                    <div class="search-container">
+                        <input data-placeholder="{{#trans}}Select a background category{{/trans}}" id="background_search" class="hide" />
+                    </div>
+
+                    <span style="margin:0;" class="prev btn pull-left">&laquo;</span>
+                    <span style="margin-bottom:10px;" class="btn" id="background_color"><i class="icon-adjust"></i> {{#trans}}Choose color{{/trans}}</span>
+                    <span style="margin:0;" class="next btn pull-right">&raquo;</span>
+
+                    <div class="clearfix" id="backgrounds_zone"></div>
+                </div>
+            </div>
+
+            <div class="menu-block hide">
+                <div class="title">
+                    <img class="pull-right" src="{{static_url}}img/icons/menu_down.png" />
+                    {{#trans}}Foregrounds{{/trans}}
+                </div>
+                <div id="foregrounds_block" class="content">
+                    <div class="search-container">
+                        <input data-placeholder="{{#trans}}Select a foreground category{{/trans}}" id="foreground_search" class="hide" />
+                    </div>
+                    <div class="clearfix" style="margin-bottom:10px;">
+                        <span style="margin:0;" class="prev btn pull-left">&laquo;</span>
+                        <span style="margin:0;" class="next btn pull-right">&raquo;</span>
+                    </div>
+
+                    <div class="clearfix" id="foregrounds_zone"></div>
+                </div>
+            </div>
+
+            <div class="menu-block hide">
+                <div class="title">
+                    <img class="pull-right" src="{{static_url}}img/icons/menu_down.png" />
+                    <span>{{#trans}}Calendar{{/trans}}</span>
+                </div>
+                <div id="calendar_block" class="content">
+                    <div class="clearfix" id="calendar_zone">
+                        {{#trans}}Choose your starting month:{{/trans}}<br />
+                        <select style="width:90%;" id="calendar_starting_month"></select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-block">
+                <div id="add_text_block" class="titletext">
+                    <img class="pull-right" src="{{static_url}}img/add16.png" />
+                    {{#trans}}Add Text Block{{/trans}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="splitter" class="pull-left"><div class="visible"></div></div>
+    <div id="main" class="pull-right">
+        <div class="canvas-wrapper">
+            <canvas id="pageflipper"></canvas>
+            <canvas id="creator"></canvas>
+
+            <div class="creatorpage left"></div>
+            <div class="creatorpage right"></div>
+        </div>
+        <div class="pages-wrapper">
+            <div id="pages" class="pages"> </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="colorpicker_modal" class="modal hide fade">
+    <div class="modal-body">
+        <div class="color-picker" data-color="rgb(0,0,0)">
+            <canvas id="text_color_picker" height="500"></canvas>
+        </div>
+        
+        <div class="multi-pages">
+            <label class="apply-to-all">
+                <input type="checkbox" id="applytoall_color_checked"> {{#trans}}Apply this choice to all pages{{/trans}}
+            </label>
+
+            <div class="buttons">
+                <button data-position="left" class="color-apply-btn btn">{{#trans}}Apply to left page{{/trans}}</button>
+                <button data-position="both" class="color-apply-btn btn">{{#trans}}Apply to both pages{{/trans}}</button>
+                <button data-position="right" class="color-apply-btn btn">{{#trans}}Apply to right page{{/trans}}</button>
+            </div>
+        </div>
+        <div class="pull-left">
+            {{#trans}}Color Value{{/trans}}
+            <input id="color-rgb-input" placeholder="#2e2f45"  class="fix-input" value=""/>
+        </div>
+        <div class="single-page pull-right">
+            <button id="single_page_apply" data-position="both" class="color-apply-btn btn btn-primary" style="margin-top: 0px;">{{#trans}}Apply{{/trans}}</button>
+            <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">{{#trans}}Cancel{{/trans}}</button>
+        </div>
+        
+        <div class="text-color pull-right">
+            <button id="text_color_apply" data-position="both" class="color-apply-btn btn btn-primary">{{#trans}}Apply{{/trans}}</button>
+            <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">{{#trans}}Cancel{{/trans}}</button>
+        </div>
+    </div>
+</div>
+
+<div id="applyto_modal" class="modal hide fade">
+    <div class="modal-body">
+        <div class="heading clearfix">
+            <div class="image-zone pull-left"></div>
+            <div class="title pull-right">{{#trans}}Choose where to apply this object{{/trans}}</div>
+        </div>
+        <div data-id="" class="object-location clearfix">
+            <div data-position="left" class="pull-left location-box">
+                <div class="position">{{#trans}}Left page{{/trans}}</div>
+                <div class="left-page"></div>
+                <button type="button" class="btn">{{#trans}}Apply{{/trans}}</button>
+            </div>
+            <div data-position="both" class="pull-left location-box">
+                <div class="position">{{#trans}}Both pages{{/trans}}</div>
+                <div class="both-pages"></div>
+                <button type="button" class="btn">{{#trans}}Apply{{/trans}}</button>
+            </div>
+            <div data-position="right" class="pull-left location-box">
+                <div class="position">{{#trans}}Right page{{/trans}}</div>
+                <div class="right-page"></div>
+                <button type="button" class="btn">{{#trans}}Apply{{/trans}}</button>
+            </div>
+        </div>
+        <label class="apply-to-all">
+            <input type="checkbox" id="applytoall_checked"> {{#trans}}Apply this choice to all pages{{/trans}}
+        </label>
+        <div class="footer">
+            <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">{{#trans}}Cancel{{/trans}}</button>
+        </div>
+    </div>
+</div>
+
+<div id="linkshare_modal" class="modal hide fade">
+    <div class="modal-header">
+        <p>{{#trans}}Copy this link to share your creation:{{/trans}}</p>
+    </div>
+    <div class="modal-body">
+        <input readonly type="text" style="width:100%; height:40px; cursor:pointer;" id="link_sharing" onclick="this.focus(); this.select();" />
+    </div>
+    <div class="modal-footer clearfix">
+        <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">{{#trans}}Close{{/trans}}</button>
+    </div>
+</div>
+
+<div id="preview_modal" class="modal hide fade">
+    <div class="modal-body"></div>
+    <div class="modal-footer clearfix">
+        <h4 class="pull-left">{{#trans}}Preview{{/trans}}</h4>
+        <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">{{#trans}}Close{{/trans}}</button>
+    </div>
+</div>
+
+<div id="edit_photo_failed" class="modal hide fade">
+    <div class="modal-body">
+        <p class="pagination-centered">{{#trans}}Please insert a photo on the page.{{/trans}}<br />{{#trans}}Then click on the photo to select it and access to the filters and frames.{{/trans}}</p>
+    </div>
+    <div class="modal-footer clearfix">
+        <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">{{#trans}}Close{{/trans}}</button>
+    </div>
+</div>
+
+<div id="full_save_modal" class="modal hide fade">
+    <div class="modal-header">
+        <p>{{#trans}}Some photo are not used in your creation, what do you want to do?{{/trans}}</p>
+    </div>
+    <div class="modal-body">
+        <label class="radio">
+            <input type="radio" name="save_mode" id="save_mode1" value="partial" checked>
+            {{#trans}}Send only photos used in my creation{{/trans}}
+        </label>
+        <label class="radio">
+            <input type="radio" name="save_mode" id="save_mode2" value="full">
+            {{#trans}}Send all photos (longer){{/trans}}
+        </label>
+    </div>
+    <div class="modal-footer clearfix">
+        <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">{{#trans}}Close{{/trans}}</button>
+        <button id="save_now" type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">{{#trans}}Save{{/trans}}</button>
+    </div>
+</div>
+
+<div id="import_modal" class="modal hide fade">
+    <div class="modal-header"></div>
+    <div class="modal-body">
+        <div class="albums"></div>
+        <div class="photos"></div>
+    </div>
+    <div class="modal-footer clearfix">
+        <div class="pull-left">
+            <button id="back_to_albums" type="button" class="btn hide" aria-hidden="true">&laquo; {{#trans}}Back to albums{{/trans}}</button>
+            <button id="add_all" type="button" class="btn btn-info hide" aria-hidden="true">{{#trans}}Select all{{/trans}}</button>
+        </div>
+            
+        <div class="pull-right">
+            <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">{{#trans}}Done{{/trans}}</button>
+        </div>
+    </div>
+</div>
+
+<div id="welcome_modal" class="modal hide">
+    <div class="modal-header">
+        {{#trans}}Choose a theme to start{{/trans}}
+        <button type="button" class="pull-right btn" data-dismiss="modal" aria-hidden="true">{{#trans}}Start without a theme{{/trans}}</button>
+    </div>
+    <div class="modal-body clearfix"></div>
+</div>
+
+<div id="pageblock_tpl" class="hide">
+    <div class="page#active#" data-index="#page_index#">
+        <div class="preview">
+            <img class="handle" src="{{static_url}}img/movepage.png">
+            <p>#page_name#</p>
+            <canvas id="canvas_#canvas_index#" class="pagethumb"></canvas>
+        </div>
+    </div>
+</div>
+<div id="popvr_grid_tpl" class="hide">
+    <label class="checkbox"><input #magnet_active# type="checkbox" id="grid_magnet"> {{#trans}}Magnetize{{/trans}}</label>
+    <label class="checkbox"><input #display_active# type="checkbox" id="grid_display"> {{#trans}}Display{{/trans}}</label>
+    <select id="grid_size">#options_sizes#</select><br />
+    <div class="btn btn-small" id="grid_apply">{{#trans}}Apply{{/trans}}</div>
+</div>
+<div id="popvr_guides_tpl" class="hide">
+    <label class="checkbox"><input #guides_active# type="checkbox" id="guides_active"> {{#trans}}Enable Smart Guides{{/trans}}</label>
+    <div style="margin-top:10px;">{{#trans}}Spacing{{/trans}}</div>
+    <select id="guides_size">#options_sizes#</select>
+    
+    <div class="clearfix">
+        <div class="btn pull-right" onclick="$('.popover-link').popover('hide');">{{#trans}}Close{{/trans}}</div>
+    </div>
+</div>
+<div id="popvr_autofill_tpl" class="hide">
+    <div class="popautofill">
+        <div class="pagination-centered">
+            <button class="btn btn-large btn-info" id="autofill_apply">{{#trans}}Start Autofill{{/trans}}</button>
+        </div>
+        <div id="manual_fill" class="pagination-centered hide">
+            <button class="btn" onclick="$('.popover-link').popover('hide');">{{#trans}}Manual Fill{{/trans}}</button>
+        </div>
+        <hr />
+        <ul>
+            <li data-sort="input" class="selected">{{#trans}}Sort by input order{{/trans}}</li>
+            <li data-sort="filename">{{#trans}}Sort by filename{{/trans}}</li>
+            <li data-sort="timestamp">{{#trans}}Sort by date of capture{{/trans}}</li>
+            <li data-sort="hue">{{#trans}}Sort by hue{{/trans}}</li>
+            <li data-sort="saturation">{{#trans}}Sort by saturation{{/trans}}</li>
+            <li data-sort="lightness">{{#trans}}Sort by lightness{{/trans}}</li>
+        </ul>
+    </div>
+</div>
+<div id="popvr_share_tpl" class="hide share-zone">
+    <a class="kwp-icon" id="share_fb" target="_blank" href='#'>
+        <img width="30" height="30" alt='Facebook' src='{{static_url}}img/share_facebook.png'/>
+    </a>
+    <a class="kwp-icon" id="share_twt" target="_blank" href="#">
+        <img width="30" height="30" alt='Twitter' src='{{static_url}}img/share_twitter.png'/>
+    </a>
+    <a class="kwp-icon" id="share_pnt" target="_blank" href="#">
+        <img width="30" height="30" alt='Pinterest' src='{{static_url}}img/share_pinterest.png'/>
+    </a>
+    <img width="30" height="30" class="kwp-icon sharelink" alt='Link sharing' src='{{static_url}}img/share_link.png'/>
+</div>
+<div id="order_layout_tpl" class="hide">
+    <div id="order_zone">
+        <p>{{#trans}}Please wait while we process your creation{{/trans}} <img src="{{static_url}}img/loader16black.gif" /></p>
+        <div id="order_zone_progress"></div>
+        <br />
+        <div class="pagination-centered">
+            <button class="btn btn-large cancel-order">{{#trans}}Cancel transfer{{/trans}}</button>
+            <!--<button class="btn btn-large testupload">{{#trans}}Temporary Save{{/trans}}</button>-->
+        </div>
+    </div>
+</div>
+<div id="photos_loading_layout" class="hide">
+    <div id="photos_loading">
+        <div>
+            <p>{{#trans}}Please wait while your photos are loading{{/trans}} <img src="{{static_url}}img/loader16black.gif" /></p>
+            <div id="photos_loading_progress"></div>
+        </div>
+    </div>
+</div>
+<script>
+    jQuery(".fix-input").keydown(function (event) {
+        if(event.keyCode==8){
+            var v = jQuery(this).val();
+            if(v!=''){
+                v=v.substring(0,v.length-1);
+                jQuery(this).val(v);
+            }
+        }
+
+    });
+</script>

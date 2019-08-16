@@ -1,0 +1,171 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+    overflow-x: hidden;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    font-family: 'Gotham A','Gotham B',Arial;
+}
+
+html {
+    font-size: 100%; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+}
+li{
+list-style: none;
+}
+a {
+	text-decoration: none;
+    color: #555;
+    display: block;
+}
+a:hover{
+    text-decoration:none !important;
+}
+p{
+    margin: 0;
+}
+input[type=button], input[type=submit], input[type=file], button, span.button, a.button{
+    outline: 0 !important;
+}
+input{
+    outline: 0 !important;
+}
+
+.arrow-1{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+/*滚动条样式*/
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 10px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+	border-radius: 6px;
+}
+
+/*vo-modal*/
+.vo-modal-mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999999;
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.vo-modal{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.vo-modal-body{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 650px;
+    height: 700px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    color: #444444;
+    z-index: 999999;
+}
+.vo-modal-footer{
+    text-align: right;
+    padding-top: 16px;
+}
+.vo-modal-footer .cancel{
+    cursor: pointer;
+    color: #08c;
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 15px;
+}   
+.vo-modal-footer .cancel:hover{
+    text-decoration: underline !important;
+}
+.vo-modal-footer .confirm{
+    font-size: 13px;
+    /*font-weight: bold;*/
+    line-height: 17px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 4px 14px;
+    margin: 0;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    border: 0;
+    background-color: #3069b3;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+/* 修改 bootstrap tooltip 背景颜色 */
+.tooltip-inner {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.5);
+}
+.tooltip.top .tooltip-arrow {
+    border-top-color: #ffffff !important;
+}
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #ffffff !important;
+}
+.tooltip.left .tooltip-arrow {
+    border-left-color: #FFFFFF;
+}
+.tooltip.right .tooltip-arrow {
+    border-right-color: #FFFFFF;
+}

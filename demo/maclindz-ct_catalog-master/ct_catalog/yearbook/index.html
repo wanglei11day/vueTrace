@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>yearbook</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/view/index.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./js/bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="whole">
+        <div class="content">
+            <div class="navigation-opt">
+                <div class="nav-item"><a href="">nav_title_1</a>&bull;</div>
+                <div class="nav-item"><a href="">nav_title_2</a>&bull;</div>
+                <div class="nav-item"><a href="">nav_title_3</a>&bull;</div>
+                <div class="nav-item"><a href="">user_name</a></div>
+            </div>
+            <div class="create-project-cell">
+                <span class="my-pro">my_store</span>
+                <div class="create-btn" id="create-modal">create_store</div>
+            </div>
+            <div class="project-list">
+                <div class="pro-itme-l1">
+                    <div class="pro-avarurl"></div>
+                    <div class="pro-info">
+                        <div class="pro-name">project_name</div>
+                        <p class="pro-url">https://schoollan.picaboo.com</p>
+                        <div class="pro_item">
+                            <div class="pro-editor">
+                                <a href="">
+                                    <img class="editor-icon" src="./assets/index_editor.png" alt="">
+                                    manage_store
+                                </a>
+                            </div>
+                            <div class="pro-delete">
+                                <a href=""> <img class="delete-icon" src="./assets/index_delete.png" alt="">
+                                    delete_store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro-itme-l2">
+                    <p>2 YEARBOOKS:</p>
+                    <div class="opt-item"><span class="sp1">Year 8</span>view <span class="sp2">丨</span> Configure
+                        selling Options</div>
+                    <div class="opt-item"><span class="sp1">Year 8</span>view <span class="sp2">丨</span> Configure
+                        selling Options</div>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="no-pro-hint">null_data_hint</div>
+            </div>
+        </div>
+    </div>
+    <!-- 创建模态 -->
+    <div class="vo-modal-mask" id="vo-modal-mask">
+        <div class="vo-modal" id="createProject-modal">
+            <div class="vo-modal-body">
+                <div class="modal-title">
+                    <p class="c3 fb">createstore</p>
+                </div>
+                <div class="form-item storename-item">
+                    <label>storename<span class="must-point">*</span></label>
+                    <input type="text" name="" class="storename">
+                    <div class="errorMessage"></div>
+                </div>
+                <div class="form-item orgname-item">
+                    <label>orgname<span class="must-point">*</span></label>
+                    <input type="text" name="" placeholder="optional" class="orgname">
+                    <span class="i-hint">orgname_eg</span>
+                    <div class="errorMessage"></div>
+                </div>
+                <div class="form-item ziporpostal-item">
+                    <label>ziporpostal<span class="must-point">*</span></label>
+                    <input type="text" name="" class="ziporpostal">
+                    <span class="i-hint">zop_eg</span>
+                    <div class="errorMessage"></div>
+                </div>
+                <div class="form-item url-item">
+                    <label>url<span class="hint">*</span></label>
+                    <span class="prefix">http://</span>
+                    <input type="text" name="" class="url">
+                    <span class="suffix">.picaboo.com</span>
+                    <div class="errorMessage"></div>
+                </div>
+                <div class="form-item contactinfo-item">
+                    <label>contactinfo<span class="must-point">*</span></label>
+                    <input type="text" name="" placeholder="optional" class="contactinfo">
+                    <div class="errorMessage">contactinfo_checkhint</div>
+                </div>
+                <div class="form-hint-item hint-item">
+                    <label></label>
+                    <span>contactinfo_hint</span>
+                </div>
+                <div class="form-item passcode-item">
+                    <label>passcode<span class="must-point">*</span></label>
+                    <input type="text" name="" placeholder="optional" class="passcode">
+                    <div class="errorMessage"></div>
+                </div>
+                <div class="form-hint-item hint-item">
+                    <label></label>
+                    <span>passcode_hint</span>
+                </div>
+                <div class="book-list-hint">passcode_listhint</div>
+                <div class="book-list">
+                    <div class="book-item">
+                        <div class="item-name">
+                            <input type="checkbox" class="book-check">
+                            <label>book</label>
+                        </div>
+                        <div class="book-href">
+                            <span class="book-href-prefix">http://.picaboo.com/</span>
+                            <input type="text" class="book-href-suffix-input">
+                        </div>
+                    </div>
+                    <div class="book-item">
+                        <div class="item-name">
+                            <input type="checkbox" class="book-check">
+                            <label>book</label>
+                        </div>
+                        <div class="book-href">
+                            <span class="book-href-prefix">http://.picaboo.com/</span>
+                            <input type="text" class="book-href-suffix-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="vo-modal-footer">
+                    <a class="cancel" id="cancel">cancel</a>
+                    <div class="confirm" id="confirm">createstore</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/view/index.js"></script>
+</body>
+
+</html>

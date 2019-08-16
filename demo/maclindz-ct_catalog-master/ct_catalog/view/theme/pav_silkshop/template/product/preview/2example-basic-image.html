@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<!-- Flipbook StyleSheet -->
+	<link href="css/dflip.css" rel="stylesheet" type="text/css">
+
+	<!-- Icons Stylesheet -->
+	<link href="css/themify-icons.css" rel="stylesheet" type="text/css">
+	            
+</head>
+<body>
+<p>Images needs to be hosted on same server(localhost or online) or they will appear black if available white if not availale..</p>
+<div id="flipbookContainer"></div>
+
+
+	<!-- jQuery 1.9.1 or above -->
+	<script src="js/libs/jquery.min.js" type="text/javascript"></script>
+
+	<!-- Flipbook main Js file -->
+	<script src="js/dflip.min.js" type="text/javascript"></script>
+	
+	
+		<script>
+    jQuery(document).ready(function () {
+		var source, options = {height: 400, duration: 800};
+			var images = ['example-assets/books/thumbs/alice.jpg', 'example-assets/books/thumbs/dflip.jpg' , 'example-assets/books/thumbs/nightangle.jpg'];
+			var flipBook = $("#flipbookContainer").flipBook(images, options);
+			});
+		</script>
+</body>
+</html>

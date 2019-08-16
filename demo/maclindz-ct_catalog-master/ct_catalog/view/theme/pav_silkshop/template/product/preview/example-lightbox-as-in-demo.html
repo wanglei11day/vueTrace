@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+
+    <title>LightBox Example</title>
+
+    <!--This can be skipped.-->
+    <link href="css/book.css" rel="stylesheet">
+
+    <!-- Flipbook StyleSheet -->
+    <link href="css/dflip.css" rel="stylesheet" type="text/css">
+
+    <!-- Icons Stylesheet -->
+    <link href="css/themify-icons.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="content absolute-stretch">
+    <div class="upper-fold">
+
+        <section class="select-book"> Select a book below to start with</section>
+
+        <section class="_df_books">
+
+            <div class="_df_books-break">Book thumb</div>
+
+            <!--Thumbnail Lightbox Usage-->
+            <!--
+            class : "_df_thumb" class is required for parsing book thumbs
+
+            df-source : link to the pdf source file
+            id : "df_(id-name)" required to detect the options if custom options are used. options variable will ve "option_(id-name)"
+            df-tags: tags are used above the thumb
+            df-thumb : link to the thumbnail for preview
+
+            -->
+            <div class="_df_thumb"
+                 df-source="example-assets/books/alice.pdf"
+                 id="df_alice"
+                 df-tags="3d,pdf,report"
+                 df-thumb="example-assets/books/thumbs/alice.jpg">
+                Alice in wonderland</div>
+            <!--setting options "option_df_alice" is below in code-->
+
+
+            <div class="_df_books-break">Button</div>
+
+            <!--Button Lightbox Usage-->
+            <!--
+            class : "_df_button" class is required for parsing buttons
+
+            df-source : link to the pdf source file
+            id : "df_(id-name)" required to detect the options if custom options are used. options variable will ve "option_(id-name)"
+
+            -->
+            <div class="_df_button"
+                 df-source="example-assets/books/alice.pdf"
+                 id="df_alice_button">
+                Alice in wonderland</div>
+
+            <!--If flipbooks are to be run by images you can use options-->
+        </section>
+    </div>
+
+</div>
+<!-- Container is not required for lightbox -->
+<!--<div id="flipbookContainer"></div>-->
+
+<!-- jQuery 1.9.1 or above -->
+<script src="js/libs/jquery.min.js" type="text/javascript"></script>
+
+<!-- Flipbook main Js file -->
+<script src="js/dflip.min.js" type="text/javascript"></script>
+
+<script>
+//Lightbox requires parsing the html dom - check any
+
+var option_df_alice = {webgl:false,backgroundColor:"#6da27f"};
+
+$(document).ready(function () {
+
+    DFLIP.parseBooks();
+
+});
+
+
+</script>
+</body>
+</html>
+

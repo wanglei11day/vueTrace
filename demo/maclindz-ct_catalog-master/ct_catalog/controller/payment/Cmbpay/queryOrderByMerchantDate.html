@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>查询已处理订单（按商户日期）</title>
+    <script type="text/javascript" src="bootstrap-3.3.5-dist/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+
+        //日期格式化 格式：yyyyMMddHHmmss
+        Date.prototype.Format = function (fmt) { //author: meizz
+            var o = {
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds(), //秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+                "S": this.getMilliseconds() //毫秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+
+        //获取签名事件
+        $(document).ready(function(){
+            $("#submitBtn").click(function(){
+                $.ajax({
+                    type:"POST",
+                    url:"getHash.php",
+                    data: "input="+JSON.stringify(GetJsonData()),
+                    dataType:"json",
+                    success:function(message){
+                        var $data = JSON.parse(message);
+                        $("input[name='sign']").attr("value",$data.data);
+                    },
+                    error:function(message){
+                        alert(2);
+                    }
+                });
+            });
+
+        });
+
+        //获取代签名的数据
+        function GetJsonData(){
+            var dateTime = new Date().Format("yyyyMMddhhmmss");
+            $("input[name='dateTime']").attr("value",dateTime);
+            var json = {
+                "dateTime":dateTime,
+                "branchNo":$("input[name='branchNo']").val(),
+                "merchantNo":$("input[name='merchantNo']").val(),
+                "beginDate":$("input[name='beginDate']").val(),
+                "endDate":$("input[name='endDate']").val(),
+                "operatorNo":$("input[name='operatorNo']").val(),
+                "nextKeyValue":$("input[name='nextKeyValue']").val()
+            };
+            return json;
+        }
+    </script>
+
+
+</head>
+<body>
+<form method="post" action="queryOrderByMerchantDate.php">
+    <br>接口版本号：<input type="text" name="version" value="1.0"> *<br>
+    <br>参数编码：<input type="text" name="charset" value="UTF-8"> *<br>
+    <br>报文签名：<input type="text" name="sign" style="width:500px;"> *<br>
+    <br>签名算法：<input type="text" name="signType" value="SHA-256"> *<br>
+    <br>时间戳：<input type="text" name="dateTime"> *<br>
+    <br>分行号：<input type="text" name="branchNo" maxlength="4" value="0755"> *<br>
+    <br>商户号: <input type="text" name="merchantNo" maxlength="6" value="000054"> *<br>
+    <br>开始日期：<input type="text" name="beginDate" maxlength="8" value="20160806"> *<br>
+    <br>结束日期：<input type="text" name="endDate" maxlength="8" value="20160806"> *<br>
+    <br>操作员号：<input type="text" name="operatorNo" value="9999"><br>
+    <br>续传键值：<input type="text" name="nextKeyValue"><br>
+    <br><button type="button" id="submitBtn">获取签名</button><br>
+    <br><input type="submit"><br>
+</form>
+
+</body>
+</html>

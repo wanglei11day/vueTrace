@@ -1,0 +1,304 @@
+.content{
+    width: 960px !important;
+    margin: 0 auto;
+}
+.navigation-opt{
+    position: relative;
+    text-align: right;
+}
+.nav-item{
+   display: inline-block;
+   padding: 7px 3px;
+   margin: 0;
+}
+.nav-item a{
+    font-size: 13px;
+    color: #3069b3;
+    padding: 10px 10px 9px;
+    display: inline-block;
+}
+
+.nav-item a:hover{
+    background-color: #3069B3;
+    color: #ffffff !important;
+}
+.create-project-cell{
+    text-align: left;
+    vertical-align: top;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3em;
+    z-index: 50;
+}
+.my-pro{
+    padding: 8px 0 0 0;
+    display: inline-block;
+}
+.create-btn{
+    color: #ffffff;
+    background-color:#3069b3;
+    font-size: 13px;
+    display: inline-block;
+    width: 100px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.create-btn:hover{
+    background-color:#407dcc;
+}
+button:hover{
+    text-decoration:none;
+    background-color:#0dafe3 !important;
+}
+.project-content{
+    padding-bottom: 230px;
+}
+.no-pro-hint{
+    font-size: 40px;
+    color: #a28575;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.project-list{
+    padding-bottom: 230px;
+    display: none;
+}
+.pro-itme-l1{
+    padding-top: 10px;
+}
+.pro-itme-l1 .pro-avarurl{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    border: 1px solid #eeeeee;
+    overflow: hidden;
+    display: inline-block;
+}
+.pro-itme-l1 .pro-info{
+    display: inline-block;
+    padding-left: 10px;
+}
+.pro-itme-l1 .pro-info .pro-name{
+    display: inline-block;
+    color: #3069b3;
+    font-size: 20px;
+}
+.pro-itme-l1 .pro-info .pro-url{
+    color: #666666;
+    font-size: 12px;
+}
+
+.pro-itme-l1 .pro_item .pro-editor{
+    display: inline-block;
+    font-size: 12px;
+    color: #3069b3;
+    cursor: pointer;
+}
+.pro-itme-l1 .pro_item .editor-icon{
+    width: 13px;
+    height: 11px;
+    background: #eeeeee;
+    display: inline-block;
+}
+.pro-itme-l1 .pro_item .pro-delete{
+    display: inline-block;
+    font-size: 12px;
+    color: #3069b3;
+    padding-left: 4px;
+}
+.pro-itme-l1 .pro_item .delete-icon{
+    width: 10px;
+    height: 10px;
+    background: #eeeeee;
+    display: inline-block;
+}
+.pro-itme-l1 .pro_item a{
+    font-weight: 700;
+    color: #3069b3;
+}
+.pro-itme-l1 .pro_item a:hover{
+   text-decoration: underline !important;
+}
+.pro-itme-l2{
+    padding-left: 74px;
+    padding-top: 10px;
+}
+.pro-itme-l2 p{
+    font-size: 14px;
+    font-weight: 700;
+    color: #333333;
+}
+.pro-itme-l2 .opt-item{
+    color: #3069b3;
+    font-size: 13px;
+}
+.pro-itme-l2 .opt-item span{
+    color: #333333;
+}
+.pro-itme-l2 .opt-item .sp1{
+    padding-right: 8px;
+}
+
+
+/*vo-modal*/
+.modal-title h1{
+    font-size: 20px;
+}
+.form-hint-item{
+    padding-left: 100px;
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 4px;
+}
+.form-item{
+    margin-bottom: 8px;
+}
+.form-item label{
+    width: 100px;
+    text-align: right;
+    color: #6c6c6c;
+    padding-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.form-item label span{
+    display: none;
+}
+.form-item .prefix, .book-list .book-href-prefix{
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 3px;
+    -moz-border-radius-topleft: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border-right: 0 !important;
+}
+.form-item .suffix,.book-list .book-href-prefix{
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+.form-item .prefix,.form-item .suffix,.book-list .book-href-prefix{
+    display: inline-block;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: auto;
+    min-width: 16px;
+    padding: 4px 5px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.form-item input[type=text], .form-item input[type=password], .form-item select,.book-href-suffix-input {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 210px;
+    padding: 4px 6px;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-left: -5px;
+}
+.form-item .url{
+    width: 100px !important;
+}
+.form-item .i-hint{
+    color: #999999;
+}
+.url-item .suffix{
+    margin-left: -6px;
+}
+.url-item .prefix{
+    margin-left: -4px;
+}
+.book-list-hint{
+    display: inline-block;
+    font-weight: bold;
+    padding: 2px 4px;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 12px;
+    background-color: #999;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+.book-list{
+    height: 175px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    padding: 10px;
+    border: 1px solid #bbb;
+    text-align: left;
+}
+.book-list .book-item{
+    margin-bottom: 8px;
+}
+.book-href-suffix-input{
+    width: 150px;
+}
+
+.errorMessage{
+    padding-left: 100px;
+    color: red;
+    font-size: 13px;
+}
+.vo-modal-body {
+    width: 650px;
+    height: 610px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

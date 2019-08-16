@@ -1,0 +1,57 @@
+Only if you are updating from version 1
+
+SINCE Version 1.1
+The locations of files in JS and icons files have been changed.
+
+Please update them in your code.
+1. "ioniicons.css" is replaced with "themify-icons.css"
+2. "js/book" folder is removed and the contents are moved to "js" folder
+
+NEW FOLDER STRUCTURE
+
+    dflip/
+    ├── css/
+    │   ├── dflip.css
+    │   └── themify-icons.css
+    │
+    ├── fonts/
+    │   ├── themify.eot
+    │   ├── themify.svg
+    │   ├── themify.ttf
+    │   └── themify.woff
+    │
+    ├── sound/
+    │   └── turn2.mp3
+    │
+    └── js/
+        ├── dflip.js
+        ├── dflip.min.js
+        └── libs/
+            ├── jquery.min.js
+            ├── pdf.min.js
+            ├── pdf.worker.min.js
+            ├── three.worker.min.js
+            └── mockup.min.js
+
+
+
+CSS:
+
+<!-- Flipbook StyleSheet -->
+<link href="css/dflip.css" rel="stylesheet" type="text/css">
+
+<!-- Icons Stylesheet -->
+<link href="css/themify-icons.css" rel="stylesheet" type="text/css">
+
+
+JavaScript:
+
+<!-- jQuery 1.9.1 or above -->
+<script src="js/libs/jquery.min.js" type="text/javascript"></script>
+
+<!-- Flipbook main Js file -->
+<script src="js/dflip.min.js" type="text/javascript"></script>
+
+
+
+Please refer to documentation for further info.

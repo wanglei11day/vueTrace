@@ -1,0 +1,132 @@
+.spbw {
+	margin-left: 8px;
+	margin-right: 8px;	
+}
+
+
+
+
+.box-gallery, .box-album {
+    background-color: #f0f0f0;
+	margin-bottom: 20px;
+	margin: 0 2% 20% 0;
+	padding:0 0 15px 0;
+    position:relative;
+
+	box-shadow:0 3px 0 #c3c3bb;
+	border-radius:3px;
+	text-align:center;
+}
+
+
+
+
+
+
+
+.box-gallery .image, .box-album .image {
+	text-align: center;
+}
+.box-gallery .image a, .box-album .image a {
+	display: block;
+}
+.box-gallery .image a:hover, .box-album .image a:hover {
+	opacity: 0.8;
+}
+.box-gallery .image img, .box-album .image img {
+	margin-bottom: 10px;
+	width: 100%;
+	border-radius: 3px 3px 0 0;
+}
+
+
+
+.box-gallery .caption h4, .box-album .caption h4 {
+	margin-top:4px;
+    margin-bottom:4px;
+	font-size: 15px;
+	line-height: 20px;
+}
+.gallcarprev {
+	position:absolute;
+	left:0px;
+	width:36px;
+	height:100%;
+	top:0px;
+	background: url(images/arrow_left.png) center center no-repeat;
+	z-index:99;
+}
+.gallcarprev:hover {
+	background: url(images/arrow_left_hover.png) center center no-repeat;
+}
+a.gallcarprev span, a.gallcarnext span { 
+	display:none;
+}
+.gallcarnext {
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:36px;
+	height:100%;
+	background: url(images/arrow_right.png) center center no-repeat;
+	z-index:99;
+}
+.gallcarnext:hover {
+	background: url(images/arrow_right_hover.png) center center no-repeat;
+}
+#column-right .col-sm-6, #column-left .col-sm-6{width: 100%;}
+.gallalbum { padding:8px 8px 4px 8px; }
+h4.gallalbum {text-align:center;}
+@media only screen and (max-width: 979px) {
+	.box-gallery { text-align:center; }
+	#cgallCurrent { display:none !important; }
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+.albdesc {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+.gallcenter {
+    float:none;
+    text-align:center;
+    clear:both;
+    margin:10px 0px;
+}
+.gallleft {
+    float:left;
+    margin-right:12px;
+}
+.gallright {
+    float:right;
+    margin-left:12px;
+}
+.gallcenter img, .gallleft img, .gallright img {
+    border-radius: 0px !important;
+}
+.gallpage {
+    margin:15px 0px;
+    padding:8px 0px;
+    height:48px;
+    border-top:1px solid #EEE;
+    Border-bottom:1px solid #EEE;   
+}
+.gpresult {
+    margin-top:6px;
+}

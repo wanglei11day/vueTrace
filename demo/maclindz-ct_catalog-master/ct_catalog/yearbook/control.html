@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>control</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/view/control.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/jeDate.css">
+    <link rel="stylesheet" href="./js/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="whole">
+        <div class="hearer-view">
+            <div class="header-action">
+                School Lan
+                <div class="point-move">
+                    <span class="point p1"></span>
+                    <span class="point p2"></span>
+                    <span class="point p3"></span>
+                    <div class="header-action-panle">
+                        <div class="arrow"></div>
+                        <div class="action-item" data-name="opt1">Organization Details</div>
+                        <div class="action-item" data-name="opt2">Transfer a Single Project</div>
+                        <div class="action-item" data-name="opt3">Transfer All Project and Stores</div>
+                        <div class="action-item" data-name="opt4">Leave Organization</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right-view">
+                <div class="header-right-c">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <div class="form-control-box">
+                                <input type="text" placeholder="My Organizations..." class="form-control search-ip">
+                            </div>
+                            <div class="arrow-box">
+                                <div class="arrow-1"></div>
+                            </div>
+                            <div class="header-input-select">
+                                <span class="select-item header-select-item">school Lan</span>
+                                <span class="select-item header-select-item">school Lan</span>
+                                <span class="select-item header-select-item">school Lan</span>
+                                <span class="select-item header-select-item">school Lan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span>Switch to All Projects</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-columns">
+            <div class="my-project">
+                <div class="header-cell">
+                    <div class="title">My Projects</div>
+                    <div class="new-project-btn" id="new-project">New Porject</div>
+                </div>
+                <div class="project-list">
+                    <div class="project-item" data-index="0">
+                        <div class="project-thumb"><img src="" alt=""></div>
+                        <div class="project-dec">
+                            <p>Year 8</p>
+                            <span>2019-2020</span>
+                        </div>
+                        <div class="c3 f12 p20 project-item-panle project-i-panle-0">
+                            <div class="list-box">
+                                <div class="arrow"></div>
+                                <div class="item mb5">Edit</div>
+                                <div class="item mb5">Change Organization</div>
+                                <div class="item mb5">Copy Project</div>
+                                <span class="line pb10 mb10"></span>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item" data-index="1">
+                        <div class="project-thumb"><img src="" alt=""></div>
+                        <div class="project-dec">
+                            <p>Year 8</p>
+                            <span>2019-2020</span>
+                        </div>
+                        <div class="c3 f12 p20 project-item-panle project-i-panle-1">
+                            <div class="list-box">
+                                <div class="arrow"></div>
+                                <div class="item mb5">Edit</div>
+                                <div class="item mb5">Change Organization</div>
+                                <div class="item mb5">Copy Project</div>
+                                <span class="line pb10 mb10"></span>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item" data-index="2">
+                        <div class="project-thumb"><img src="" alt=""></div>
+                        <div class="project-dec">
+                            <p>Year 8</p>
+                            <span>2019-2020</span>
+                        </div>
+                        <div class="c3 f12 p20 project-item-panle project-i-panle-2">
+                            <div class="list-box">
+                                <div class="arrow"></div>
+                                <div class="item mb5">Edit</div>
+                                <div class="item mb5">Change Organization</div>
+                                <div class="item mb5">Copy Project</div>
+                                <span class="line pb10 mb10"></span>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item" data-index="3">
+                        <div class="project-thumb"><img src="" alt=""></div>
+                        <div class="project-dec">
+                            <p>Year 8</p>
+                            <span>2019-2020</span>
+                        </div>
+                        <div class="c3 f12 p20 project-item-panle project-i-panle-3">
+                            <div class="list-box">
+                                <div class="arrow"></div>
+                                <div class="item mb5">Edit</div>
+                                <div class="item mb5">Change Organization</div>
+                                <div class="item mb5">Copy Project</div>
+                                <span class="line pb10 mb10"></span>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item" data-index="4">
+                        <div class="project-thumb"><img src="" alt=""></div>
+                        <div class="project-dec">
+                            <p>Year 8</p>
+                            <span>2019-2020</span>
+                        </div>
+                        <div class="c3 f12 p20 project-item-panle project-i-panle-4">
+                            <div class="list-box">
+                                <div class="arrow"></div>
+                                <div class="item mb5">Edit</div>
+                                <div class="item mb5">Change Organization</div>
+                                <div class="item mb5">Copy Project</div>
+                                <span class="line pb10 mb10"></span>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item" data-index="5">
+                        <div class="project-thumb"><img src="" alt=""></div>
+                        <div class="project-dec">
+                            <p>Year 8</p>
+                            <span>2019-2020</span>
+                        </div>
+                        <div class="c3 f12 p20 project-item-panle project-i-panle-5">
+                            <div class="list-box">
+                                <div class="arrow"></div>
+                                <div class="item mb5">Edit</div>
+                                <div class="item mb5">Change Organization</div>
+                                <div class="item mb5">Copy Project</div>
+                                <span class="line pb10 mb10"></span>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item" data-index="6">
+                        <div class="project-thumb"><img src="" alt=""></div>
+                        <div class="project-dec">
+                            <p>Year 8</p>
+                            <span>2019-2020</span>
+                        </div>
+                        <div class="c3 f12 p20 project-item-panle project-i-panle-6">
+                            <div class="list-box">
+                                <div class="arrow"></div>
+                                <div class="item mb5">Edit</div>
+                                <div class="item mb5">Change Organization</div>
+                                <div class="item mb5">Copy Project</div>
+                                <span class="line pb10 mb10"></span>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="peoject-manage">
+                <div class="header-cell">
+                    <div class="title">Storefronts</div>
+                    <div class="new-project-btn">Manage Storefronts</div>
+                </div>
+                <div class="manage-opt">
+                    <p class="hint">This organization has no storefronts.</p>
+                </div>
+            </div>
+        </div>
+        <!-- modal nav opt1  -->
+        <div class="vo-modal-mask vo-optone-modal" id="vo-optone-modal">
+            <div class="vo-modal" id="createProject-modal">
+                <div class="vo-modal-body vo-optone-body">
+                    <div class="modal-title">title</div>
+                    <div class="project-name">school Lan</div>
+                    <p class="project-dec">Singapore Singapore 61231</p>
+                    <p class="phone-num">phone Number</p>
+                    <div class="phone-input-cell">
+                        <input type="text" value="" class="form-control phone-input">
+                        <div class="modal-submit-btn">Update</div>
+                    </div>
+                    <div class="vo-modal-footer">
+                        <div class="confirm" id="vo_optone_confirm">close</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal nav opt2  -->
+        <div class="vo-modal-mask vo-opttwo-modal" id="vo-opttwo-modal">
+            <div class="vo-modal" id="createProject-modal">
+                <div class="vo-modal-body vo-opttwo-body">
+                    <div class="modal-title">title</div>
+                    <div class="project-name">Applet provides a simple and efficient application development framework
+                        and rich components and apis to help developers develop services with native APP experience in
+                        WeChat.</div>
+                    <p class="project-dec">This chapter introduces the small program development language, framework,
+                        ability, debugging and other content, to help developers quickly and comprehensively understand
+                        all aspects of small program development.</p>
+                    <p class="phone-num">For more details on the framework, components, and apis, please refer to the
+                        corresponding reference documentation:</p>
+                    <div class="phone-input-cell">
+                        <p class="input-title">project to transfer</p>
+                        <div class="input-box">
+                            <select>
+                                <option value="High School">High School</option>
+                                <option value="High School">High School</option>
+                                <option value="High School">High School</option>
+                                <option value="High School">High School</option>
+                                <option value="High School">High School</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="phone-input-cell phone-input-cell-c2">
+                        <p class="input-title">Email addres of existing account</p>
+                        <input type="text" value="" class="form-control phone-input">
+                    </div>
+                    <div class="vo-modal-footer">
+                        <div class="i-need-help">I need help</div>
+                        <div class="footer-rg-right">
+                            <div class="cancel" id="vo_opttwo_cancel">cancel</div>
+                            <div class="confirm" id="vo_opttwo_confirm">close</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal nav opt3  -->
+        <div class="vo-modal-mask vo-optthree-modal" id="vo-optthree-modal">
+            <div class="vo-modal" id="createProject-modal">
+                <div class="vo-modal-body vo-optthree-body">
+                    <div class="modal-title">title</div>
+                    <div class="project-name">Applet provides a simple and efficient application development framework
+                        and rich components and apis to help developers develop services with native APP experience in
+                        WeChat.
+                        This chapter introduces the small program development language, framework,
+                        ability, debugging and other content, to help developers quickly and comprehensively understand
+                        all aspects of small program development.
+                    </div>
+                    <div class="projects">
+                        <span class="sp1">Projects:</span>
+                        <span class="sp2">Year 7, Year 8</span>
+                    </div>
+                    <div class="stores">
+                        <span class="sp1">Stores:</span>
+                        <span class="sp2">None</span>
+                    </div>
+                    <div class="phone-input-cell phone-input-cell-c2">
+                        <p class="input-title">Email addres of existing account</p>
+                        <input type="text" value="" class="form-control phone-input">
+                    </div>
+                    <div class="vo-modal-footer">
+                        <div class="i-need-help">I need help</div>
+                        <div class="footer-rg-right">
+                            <div class="cancel" id="vo_optthree_cancel">cancel</div>
+                            <div class="confirm" id="vo_optthree_confirm">close</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal nav opt4  -->
+        <div class="vo-modal-mask vo-optfour-modal" id="vo-optfour-modal">
+            <div class="vo-modal" id="createProject-modal">
+                <div class="vo-modal-body vo-optfour-body">
+                    <div class="modal-title">title</div>
+                    <div class="project-name">Applet provides a simple and efficient application development framework
+                        and rich components and apis to help developers develop services with native APP experience in
+                        WeChat.
+                        This chapter introduces the small program development language, framework
+                    </div>
+                    <div class="vo-modal-footer">
+                        <div class="footer-rg-right">
+                            <div class="confirm" id="vo_optfour_confirm">Okay，got it</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal 5 -->
+        <div class="vo-modal-mask vo-optfive-modal" id="vo-optfive-modal">
+            <div class="vo-modal" id="createProject-modal">
+                <div class="vo-modal-body vo-optfive-body">
+                    <div class="content">
+                        <div class="lf-view">
+                            <p>Find and join your organization:</p>
+                            <div class="input-box">
+                                <select>
+                                    <option value="High School">High School</option>
+                                    <option value="High School">High School</option>
+                                    <option value="High School">High School</option>
+                                    <option value="High School">High School</option>
+                                    <option value="High School">High School</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rg-view">
+                            <div class="img-box"><img src="./assets/control-modal-5.png" alt=""></div>
+                            <div class="text-dec">Applet provides a simple and efficient application development
+                                frameworkand rich components help developers develop services with native APP
+                                experience inWeChat.<a class="here">here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vo-modal-footer">
+                        <div class="i-need-help optfive-modal-add-myor">I can't find my organization</div>
+                        <div class="footer-rg-right">
+                            <div class="cancel" id="vo_optfive_cancel">cancel</div>
+                            <div class="confirm" id="vo_optfive_confirm">Next</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal 6 -->
+        <div class="vo-modal-mask vo-optsix-modal" id="vo-optsix-modal">
+            <div class="vo-modal" id="createProject-modal">
+                <div class="vo-modal-body vo-optsix-body">
+                    <div class="modal-title">Add Your Organization</div>
+                    <P class="title-aid">Tell us a little about your organization</P>
+                    <div class='con-cell-list'>
+                        <div class="con-cell con-cell-l1">
+                            <p>Organization Name</p>
+                            <input type="text" name="org-name" class="">
+                        </div>
+                        <div class="con-cell con-cell-l1">
+                            <p>City</p>
+                            <input type="text" name="org-city" class="">
+                        </div>
+                        <div class="con-cell con-cell-l1">
+                            <p>State/Province</p>
+                            <input type="text" name="org-stateorpro" class="">
+                        </div>
+                        <div class="con-cell con-cell-l2">
+                            <p>Zip/Postal Code</p>
+                            <input type="text" name="org-code" class="">
+                        </div>
+                        <div class="con-cell con-cell-l3">
+                            <p>Organization Type</p>
+                            <div class="input-box">
+                                <select>
+                                    <option value="High School">High School</option>
+                                    <option value="High School">High School</option>
+                                    <option value="High School">High School</option>
+                                    <option value="High School">High School</option>
+                                    <option value="High School">High School</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="con-cell con-cell-l4">
+                            <p>Phone Number</p>
+                            <div class="input-box">
+                                <input type="text" name="org-phone" class="">
+                                <span>So we can provide the best service,please provide a valid phone number</span>
+                            </div>
+                        </div>
+                        <div class="vo-modal-footer">
+                            <div class="footer-rg-right">
+                                <div class="cancel" id="vo_optsix_cancel">Go back</div>
+                                <div class="confirm" id="vo_optsix_confirm">Add</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal 7 editor my project -->
+        <div class="vo-modal-mask vo-optseven-modal" id="vo-optseven-modal">
+            <div class="vo-modal" id="createProject-modal">
+                <div class="vo-modal-body vo-optseven-body">
+                    <div class="modal-title">Start New Project</div>
+                    <P class="title-aid">Please tell us about your new Project</P>
+                    <div class='con-cell-list'>
+                        <div class="con-cell-checked con-cell-checked-l1">
+                            <div class="checked-box">
+                                <span class="check-active"></span>
+                            </div>
+                            <span class="check-text">Create Blank Project</span>
+                        </div>
+                        <div class="con-cell-checked con-cell-checked-l2">
+                            <div class="checked-box">
+                                <span class="check-active"></span>
+                            </div>
+                            <span class="check-text">Create From Existing Project</span>
+                            <div class="create-help optseven-create-help">
+                                <div class="help-icon-box">
+                                    <img src="./assets/control-7-help.png" alt="">
+                                    <div class="create-help-panle">
+                                        <div class="arrow"></div>
+                                        <div class="action-item" data-name="opt1">Organization Details</div>
+                                        <div class="action-item" data-name="opt2">Transfer a Single Project</div>
+                                        <div class="action-item" data-name="opt3">Transfer All Project and Stores
+                                        </div>
+                                        <div class="action-item" data-name="opt4">Leave Organization</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="con-cell con-cell-l1">
+                            <p>Blank Name</p>
+                            <input type="text" name="org-blankname" class="">
+                        </div>
+                        <div class="con-cell con-cell-l1">
+                            <p>Book Type</p>
+                            <div class="input-box">
+                                <select>
+                                    <option value="year">Book Type</option>
+                                    <option value="year">Book Type</option>
+                                    <option value="year">Book Type</option>
+                                    <option value="year">Book Type</option>
+                                    <option value="year">Book Type</option>
+                                    <option value="year">Book Type</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="con-cell con-cell-l2">
+                            <p>Year Ending</p>
+                            <div class="input-box">
+                                <select>
+                                    <option value="year">2019</option>
+                                    <option value="year">2019</option>
+                                    <option value="year">2019</option>
+                                    <option value="year">2019</option>
+                                    <option value="year">2019</option>
+                                    <option value="year">2019</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="con-cell con-cell-l3">
+                            <p>Estimated Page Quantity</p>
+                            <input type="text" name="org-epage" class="">
+                            <div class="msg-hint"></div>
+                        </div>
+                        <div class="con-cell con-cell-l3">
+                            <p>Estimated Book Quantity</p>
+                            <input type="text" name="org-ebook" class="">
+                            <div class="msg-hint">×Required</div>
+                        </div>
+                        <div class="con-cell con-cell-l4">
+                            <p>Estimated Order Date</p>
+                            <div class="input-box">
+                                <input type="text" placeholder="Select date..." name="org-type"
+                                    class="modal-six-org-type" id="date">
+                                <div class="date-icon-box">
+                                    <img src="./assets/control-7-date.png" alt="">
+                                </div>
+                            </div>
+                            <div class="msg-hint">×Required</div>
+                        </div>
+                        <div class="book-preview-view">
+                            <div class="title">Yearbook Size</div>
+                            <div class="title-aid">This size CANNOT be changed later</div>
+                            <div class="book-icon-preview">
+                                <div class="icon-type-item icon-type-item-1">
+                                    <img src="./assets/control-7-book-max.png" alt="">
+                                    <div class="icon-check-cell">
+                                        <div class="icon-check-box">
+                                            <span class="icon-check-active"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icon-type-item">
+                                    <img src="./assets/control-7-book-min.png" alt="">
+                                    <div class="icon-check-cell">
+                                        <div class="icon-check-box">
+                                            <span class="icon-check-active"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vo-modal-footer">
+                            <div class="footer-rg-right">
+                                <div class="cancel" id="vo_optseven_cancel">Cancel</div>
+                                <div class="confirm" id="vo_optseven_confirm">Save</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/libs/jedeta.js"></script>
+    <script src="./js/view/control.js"></script>
+    <script>
+        var enLang = {
+            name: "en",
+            month: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+            weeks: ["SUN", "MON", "TUR", "WED", "THU", "FRI", "SAT"],
+            times: ["Hour", "Minute", "Second"],
+            timetxt: ["Time", "Start Time", "End Time"],
+            backtxt: "Back",
+            clear: "Clear",
+            today: "Now",
+            yes: "Confirm",
+            close: "Close"
+        }
+        jeDate("#date", {
+            // language:enLang,
+            format: "YYYY/MM/DD"
+        });
+    </script>
+
+</body>
+
+</html>
